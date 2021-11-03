@@ -47,6 +47,7 @@ main {
   background-color: var(--text-color);
   color: var(--text-color-contrast);
   font-family: var(--font-family-global);
+  transition: background 0.4s;
 }
 
 .button:hover {
