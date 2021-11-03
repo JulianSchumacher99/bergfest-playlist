@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Form.module.css';
 
 function Form(): JSX.Element {
+  const [FirstName, setFirstName] = useState('');
+  console.log(FirstName);
+  const [LastName, setLastName] = useState('');
+  console.log(LastName);
+  const submitFirstName;
+  const submitLastName;
+
   return (
     <form className={styles.form}>
       <div className={styles.input__text}>
@@ -10,8 +17,9 @@ function Form(): JSX.Element {
           <input
             className={styles.input__field}
             type="text"
-            id="FirstName"
-            name="Vorname"
+            value={FirstName}
+            onChange={(event) => submitFirstName(event.target.value)}
+            onSubmit={(event) => submitLastName(event.preventDefault)}
           />
         </label>
       </div>
@@ -21,8 +29,9 @@ function Form(): JSX.Element {
           <input
             className={styles.input__field}
             type="text"
-            id="LastName"
-            name="Nachname"
+            value={LastName}
+            onChange={(event) => setLastName(event.target.value)}
+            onSubmit={(event) => submitLastName(event.preventDefault)}
           />
         </label>
       </div>
