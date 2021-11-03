@@ -1,3 +1,62 @@
 main {
-  margin: 0;
+  height: 100vh;
+  overflow: auto;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  background-image: url('https://images.pexels.com/photos/225228/pexels-photo-225228.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+  background-size: cover;
+  background-position: center center;
+  width: 100vw;
+  visibility: inherit;
+  background-repeat: no-repeat;
+  color: var(--text-color-global);
+  font-family: var(--font-family-global);
+}
+
+.container {
+  display: grid;
+}
+
+.container__content {
+  background: rgb(203 195 186 / 90%);
+  padding: 4em;
+  border-radius: 1em;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 2.4em;
+}
+
+.form {
+  display: grid;
+}
+
+.input__text {
+  display: grid;
+  margin: 0.2em 0 0.4em;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.button {
+  border-radius: 1em;
+  border: 0;
+  padding: 0.6em;
+  background-color: var(--text-color);
+  color: var(--text-color-contrast);
+}
+
+.button:hover {
+  background: var(--text-color-contrast);
+  color: var(--text-color);
+}
+
+.input__field {
+  opacity: 70%;
+  background: rgb(229 227 215 / 70%);
+  padding: 0.4em;
+  border: 0;
+  border-radius: 1em;
 }

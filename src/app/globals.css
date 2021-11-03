@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color-global: #393939;
+  --text-color: #524f4a;
+  --text-color-contrast: #e5e3d7;
+  --background-color: #cbc3ba;
+  --font-family-global: 'Indie Flower', cursive;
+}
+
 body {
   margin: 0;
 }
