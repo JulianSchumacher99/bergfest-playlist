@@ -9,23 +9,22 @@
   text-transform: uppercase;
 }
 
-.button {
+.submit {
   border-radius: 1em;
   border: 0;
   padding: 0.6em;
   background-color: var(--text-color);
   color: var(--text-color-contrast);
   font-family: var(--font-family-global);
-  transition: background 0.4s;
+  transition: all 0.4s ease-in-out;
 }
 
-.button:hover {
+.submit:hover {
   background: var(--text-color-contrast);
   color: var(--text-color);
 }
 
 .input__field {
-  opacity: 70%;
   background: rgb(229 227 215 / 70%);
   padding: 0.4em;
   border: 0;

@@ -5,25 +5,29 @@ function Form(): JSX.Element {
   return (
     <form className={styles.form}>
       <div className={styles.input__text}>
-        <span>Vorname</span>
-        <input
-          className={styles.input__field}
-          type="text"
-          id="FirstName"
-          name="Vorname"
-        />
+        <label>
+          <p>Vorname</p>
+          <input
+            className={styles.input__field}
+            type="text"
+            id="FirstName"
+            name="Vorname"
+          />
+        </label>
       </div>
       <div className={styles.input__text}>
-        <span>Nachname</span>
-        <input
-          className={styles.input__field}
-          type="text"
-          id="LastName"
-          name="Nachname"
-        />
+        <label>
+          <p>Nachname</p>
+          <input
+            className={styles.input__field}
+            type="text"
+            id="LastName"
+            name="Nachname"
+          />
+        </label>
       </div>
       <input
-        className={styles.button}
+        className={styles.submit}
         type="submit"
         id="Submit"
         value="Los geht's"
