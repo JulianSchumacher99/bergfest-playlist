@@ -1,3 +1,20 @@
-main {
-  margin: 0;
+.container {
+  display: grid;
+  height: 100vh;
+  overflow: auto;
+  align-content: center;
+  justify-items: center;
+  background-image: url('https://images.pexels.com/photos/225228/pexels-photo-225228.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  background-repeat: no-repeat;
+  color: var(--text-color-global);
+  font-family: var(--font-family-global);
+}
+
+.container__content {
+  background: rgb(203 195 186 / 90%);
+  padding: 4em;
+  border-radius: 1em;
 }
