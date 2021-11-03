@@ -14,7 +14,7 @@ function App(): JSX.Element {
               type="text"
               id="FirstName"
               name="Vorname"
-            ></input>
+            />
           </div>
           <div className={styles.input__text}>
             <span>Nachname</span>
@@ -23,14 +23,14 @@ function App(): JSX.Element {
               type="text"
               id="LastName"
               name="Nachname"
-            ></input>
+            />
           </div>
           <input
             className={styles.button}
             type="submit"
             id="Submit"
             value="Los geht's"
-          ></input>
+          />
         </form>
       </div>
     </main>
