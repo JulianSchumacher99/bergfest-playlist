@@ -1,9 +1,21 @@
 import React, { FormEvent, useState } from 'react';
 import styles from './Form.module.css';
 
-function Form(): JSX.Element {
+type User = {
+  id: number;
+  firstName: string;
+  lastName: string;
+};
+
+type FormProps = {
+  onSelectUserName: (username: string) => void;
+};
+
+function Form({ onSelectUserName }: FormProps): JSX.Element {
   const [FirstName, setFirstName] = useState('');
   const [LastName, setLastName] = useState('');
+  const [users, setUsers] = useState<User[]>([]);
+
   const handleSumbit = (event: FormEvent) => {
     event.preventDefault();
     fetch('https://json-server.machens.dev/users', {
@@ -17,9 +29,29 @@ function Form(): JSX.Element {
       }),
     });
   };
+  async function handleClick() {
+    const response = await fetch('https://json-server.machens.dev/users');
+    const newUsers = await response.json();
+    setUsers(newUsers);
+  }
+
+  const allUsers = users.map((user) => (
+    <option key={user.id}>
+      {user.firstName} {user.lastName}
+    </option>
+  ));
 
   return (
     <form className={styles.form} onSubmit={handleSumbit}>
+      <select
+        className={styles.selectUser}
+        onClick={handleClick}
+        onChange={(event) => onSelectUserName(event.target.value)}
+      >
+        <option>Gast auswählen</option>
+        {allUsers}
+      </select>
+
       <div className={styles.input__text}>
         <label>
           <p>Vorname</p>
